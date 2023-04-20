@@ -1,0 +1,30 @@
+@use '../../scss/vars.scss' as vars;
+
+.categories {
+  margin-bottom: 50px;
+  .list {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+  .item:not(:last-child) {
+    margin-right: 24px;
+  }
+  .btn {
+    background-color: vars.$white;
+    color: vars.$dark-900;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: vars.$dark-500;
+    border-bottom: 3px solid rgba($color: vars.$green-900, $alpha: 0);
+    transition: all ease 0.3s;
+
+    &:hover {
+      border-bottom: 3px solid rgba($color: vars.$green-900, $alpha: 0.2);
+    }
+  }
+}

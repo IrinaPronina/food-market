@@ -1,0 +1,272 @@
+@use '../../scss/vars.scss' as vars;
+
+.header {
+  .top {
+    background-color: vars.$dark-800;
+    text-transform: uppercase;
+    padding: 17px 0;
+  }
+
+  .topMenu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    color: vars.$white;
+    font-family: 'lato', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    transition: all ease 0.3s;
+
+    .icon {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      opacity: 70%;
+
+      .icon {
+        fill: rgba($color: vars.$dark-800, $alpha: 0.7);
+      }
+    }
+  }
+
+  .item {
+    display: inline-block;
+
+    &_delivery {
+      position: relative;
+      margin-right: 40px;
+
+      .p {
+        width: 100%;
+        color: inherit;
+      }
+    }
+
+    &_support {
+      position: relative;
+
+      &:before {
+        content: '';
+        // background-image: url(../img/support.svg);
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: -33px;
+        top: -4px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .p {
+        margin-right: 82px;
+        width: 100%;
+        color: inherit;
+      }
+    }
+  }
+
+  .topRight {
+    .item:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  .bottom {
+    background-color: vars.$green-900;
+  }
+
+  .bottomWrapper {
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    width: 100%;
+  }
+
+  .catalog {
+    border: none;
+    background-color: vars.$white;
+    letter-spacing: 0.3px;
+    color: vars.$green-900;
+    padding: 15px 40px 15px 61px;
+    border-radius: 6px;
+    position: relative;
+    transition: all ease 0.3s;
+
+    &:hover,
+    :active {
+      background-color: #e0edcf;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 18px;
+      display: inline-block;
+      width: 25px;
+      height: 17px;
+      background: url('../../assets/img/catalog.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &:before path {
+      background-color: vars.$green-900;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 21px;
+      right: 17px;
+      width: 8px;
+      height: 4px;
+      // background: url('../img/svg/chevron-down.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .search {
+    border-radius: 6px;
+    position: relative;
+    max-width: 576px;
+    flex: 0 1 auto;
+
+    &_items {
+      display: flex;
+      align-items: center;
+    }
+
+    &_input {
+      font-weight: 400;
+      background-color: vars.$white;
+      letter-spacing: 0.3px;
+      color: vars.$dark-800;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+      padding: 15px 15px 15px 50px;
+      border: none;
+      margin: 0;
+    }
+
+    &_icon {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      width: 21px;
+      height: 20px;
+      fill: vars.$dark-900;
+      object-fit: cover;
+      z-index: 10;
+    }
+
+    &_btn {
+      background-color: vars.$dark-800;
+      color: vars.$white;
+      text-transform: uppercase;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      padding: 15px 52px;
+      border: none;
+      margin: 0;
+      transition: all ease 0.3s;
+
+      &:hover {
+        background-color: rgba($color: vars.$dark-800, $alpha: 0.85);
+      }
+
+      &:active {
+        background-color: vars.$dark-800;
+        color: rgba($color: vars.$white, $alpha: 0.5);
+      }
+
+      &:focus {
+        background-color: vars.$dark-800;
+        color: vars.$white;
+        box-shadow: 0 0 0 4px rgba($color: vars.$white, $alpha: 0.5);
+      }
+    }
+  }
+}
+
+.user_nav {
+  display: flex;
+
+  .item {
+    position: relative;
+    align-self: center;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .item_btn {
+    border-radius: 3px;
+    border: none;
+    border-radius: 3px;
+    background-color: vars.$green-900;
+    transition: all ease 0.3s;
+
+    &:hover {
+      background-color: rgba($color: vars.$white, $alpha: 0.1);
+    }
+  }
+
+  .user {
+    position: relative;
+    padding: 9px 12.5px;
+
+    .svg {
+      width: 25px;
+      height: 32px;
+      fill: vars.$white;
+    }
+  }
+
+  .fav {
+    position: relative;
+    padding: 9px 11px;
+
+    .svg {
+      width: 32px;
+      height: 32px;
+      fill: vars.$white;
+    }
+  }
+
+  .cart {
+    position: relative;
+    padding: 9px 8px 10px 10px;
+
+    .svg {
+      width: 31px;
+      height: 32px;
+      fill: vars.$white;
+    }
+  }
+
+  .num {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: vars.$white;
+    color: vars.$red-900;
+    top: 0px;
+    left: 2px;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+  }
+}

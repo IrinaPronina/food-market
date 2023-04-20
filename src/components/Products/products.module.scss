@@ -1,0 +1,16 @@
+@use '../../scss/vars.scss' as vars;
+
+.products {
+  .title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+  }
+  article {
+    grid-column: 3 span;
+  }
+}
