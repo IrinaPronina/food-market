@@ -1,1 +1,1 @@
-Food market - online shopping with standar options.
+Food market - online shopping with standart options.
