@@ -1,8 +1,5 @@
 import React from 'react';
 import styles from './plus.module.scss';
-// import { ReactComponent as IconDel } from './../../assets/icons/scooter.svg';
-// import { ReactComponent as IconReturn } from './../../assets/icons/return-box.svg';
-// import { ReactComponent as IconSup } from './../../assets/icons/sup.svg';
 
 import IconDel from './../../assets/icons/scooter.svg';
 import IconReturn from './../../assets/icons/return-box.svg';
@@ -24,7 +21,7 @@ export default function Plus() {
     },
   ];
 
-  const plusesArr = Object.entries(pluses);
+  const plusesArr = Object.entries(pluses); //object into array
 
   // const ps = ['For orders over $50', 'If the goods have been damaged', 'Top Operators'];
 

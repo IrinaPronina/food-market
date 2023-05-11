@@ -7,9 +7,18 @@
     margin-bottom: 50px;
     justify-content: center;
   }
-  .item:not(:last-child) {
-    margin-right: 24px;
+
+  .item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+    &.active {
+      .btn {
+        border-bottom: 3px solid rgba($color: vars.$green-900, $alpha: 0.2);
+      }
+    }
   }
+
   .btn {
     background-color: vars.$white;
     color: vars.$dark-900;
@@ -24,7 +33,7 @@
     transition: all ease 0.3s;
 
     &:hover {
-      border-bottom: 3px solid rgba($color: vars.$green-900, $alpha: 0.2);
+      border-bottom: 3px solid rgba($color: vars.$green-900, $alpha: 0.1);
     }
   }
 }
